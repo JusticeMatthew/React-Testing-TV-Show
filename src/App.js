@@ -15,7 +15,7 @@ export default function App() {
   const episodes = seasons[selectedSeason] || [];
 
   useEffect(() => {
-    let isMounted = true;
+    let isMounted = true; // For cleanup
     const getShowData = async () => {
       const res = await fetchShow();
       if (isMounted) {
@@ -25,7 +25,7 @@ export default function App() {
     };
     getShowData();
     return () => {
-      isMounted = false;
+      isMounted = false; // Cleaning up effect hook
     };
   }, []);
 
