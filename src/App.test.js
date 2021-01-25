@@ -12,8 +12,8 @@ test('Dropdown is functional and renders correct season', async () => {
 
   // Testing dropdown existence
   const dropdown = await screen.findByText(/select a season/i);
-  userEvent.click(dropdown);
   // Dropdown drops down...
+  userEvent.click(dropdown);
   const seasonOne = await screen.findByText(/season 1/i);
   expect(seasonOne).toBeInTheDocument();
   // Select a season renders episodes

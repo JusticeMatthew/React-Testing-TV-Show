@@ -10,6 +10,5 @@ export const fetchShow = () => {
     })
     .catch((err) => {
       console.log('ERRROOROROROORORORO', err.response.data);
-      return err;
     });
 };
